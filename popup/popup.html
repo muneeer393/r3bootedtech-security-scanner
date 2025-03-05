@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R3BOOTED TECHNOLOGY</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 280px;
+            width: 320px;
+            background-color: black;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 1.6em;
+            margin-bottom: 5px;
+        }
+
+        .r3booted {
+            background: linear-gradient(to right, #ffcc00, #ff6600);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .technology {
+            background: linear-gradient(to right, #00ccff, #0066ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        h2 {
+            font-size: 1em;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        .button {
+            background: linear-gradient(to right, #00ccff, #0066ff);
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            margin: 7px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: all 0.3s ease-in-out;
+            width: 70%;
+            max-width: 180px;
+            box-shadow: 0px 3px 8px rgba(0, 204, 255, 0.4);
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: linear-gradient(to right, #ffcc00, #ff6600);
+            box-shadow: 0px 5px 12px rgba(0, 153, 255, 0.6);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #222;
+            color: white;
+        }
+
+        #loading-spinner {
+            display: none;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        #results {
+            margin-top: 20px;
+        }
+
+        #securityBarContainer {
+            position: absolute;
+            top: 10px;
+            right: 5px;
+            width: 10px;
+            height: 90%;
+            background-color: #333;
+            border-radius: 5px;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end; /* Aligns the bar at the bottom */
+}
+
+#securityBar {
+    width: 100%;
+    height: 0;
+    transition: height 0.5s ease-in-out;
+}
+
+        /* Style for the "See More" and "See Less" buttons */
+        #seeMore, #seeLess {
+            background: black;
+            color: grey;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        #seeMore:hover, #seeLess:hover {
+            color: white;
+        }
+        #r3bootedLink {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 0.7rem;
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+#r3bootedLink:hover {
+    color: white;
+    text-decoration: underline;
+}
+    </style>
+</head>
+<a id="r3bootedLink" href="https://r3bootedtech.carrd.co" target="_blank">About Us</a>
+<body>
+    <h1>
+        <span class="r3booted">R3BOOTED</span> <span class="technology">TECH</span>
+    </h1>
+    <h2>Web Security Scanner</h2>
+    <input type="text" id="custom-url" placeholder="Enter website URL" />
+    <button class="button" id="scan-custom">Scan Entered URL</button>
+    <button class="button" id="scan-current">Scan Current Tab</button>
+    <div id="loading-spinner">Loading...</div>
+    <div id="results"></div>
+    <div id="result"></div>
+    <div id="securityBarContainer">
+        <div id="securityBar"></div>
+    </div>
+    <ul id="details" style="display: none;"></ul>
+    <button id="seeMore" style="display: none;">See More</button>
+
+    <script src="popup.js"></script>
+</body>
+</html>
