@@ -41,6 +41,6 @@ Contributions are welcome! If you'd like to improve this project:
 This project is **open-source** and available under the **MIT License**.
 
 ## Contact
-For more information, visit **[R3booted Tech](<YOUR WEBSITE URL>)**.
+For more information, visit **[R3booted Tech]([<YOUR WEBSITE URL>](https://r3bootedtech.carrd.co/#))**.
 
 
